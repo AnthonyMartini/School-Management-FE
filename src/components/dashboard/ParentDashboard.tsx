@@ -89,8 +89,8 @@ const ParentDashboard: React.FC = () => {
           {childrenData.map((c: ParentChild, i: number) => (
             <div key={i} className="flex items-center justify-between gap-4">
               <span className="text-xs font-bold text-gray-600">{c.name}</span>
-              <span className={`text-[10px] font-black uppercase tracking-widest ${c.alerts > 0 ? 'text-orange-600' : 'text-gray-400'}`}>
-                {c.alerts} No Alerts
+              <span className={`text-[10px] font-black uppercase tracking-widest ${(c.alerts ?? 0) > 0 ? 'text-orange-600' : 'text-gray-400'}`}>
+                {c.alerts ?? 0} No Alerts
               </span>
             </div>
           ))}

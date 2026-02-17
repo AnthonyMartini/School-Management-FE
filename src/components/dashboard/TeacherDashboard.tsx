@@ -95,21 +95,24 @@ const TeacherDashboard: React.FC = () => {
       key: "grade",
       label: "Grade",
       sortable: true,
-      render: (grade: string) => (
-        <span
-          className={`px-2 py-1 rounded-full text-xs font-medium ${
-            parseFloat(grade) >= 90
-              ? "bg-green-100 text-green-800"
-              : parseFloat(grade) >= 80
-              ? "bg-blue-100 text-blue-800"
-              : parseFloat(grade) >= 70
-              ? "bg-yellow-100 text-yellow-800"
-              : "bg-red-100 text-red-800"
-          }`}
-        >
-          {grade}
-        </span>
-      ),
+      render: (value: unknown) => {
+        const grade = String(value);
+        return (
+          <span
+            className={`px-2 py-1 rounded-full text-xs font-medium ${
+              parseFloat(grade) >= 90
+                ? "bg-green-100 text-green-800"
+                : parseFloat(grade) >= 80
+                  ? "bg-blue-100 text-blue-800"
+                  : parseFloat(grade) >= 70
+                    ? "bg-yellow-100 text-yellow-800"
+                    : "bg-red-100 text-red-800"
+            }`}
+          >
+            {grade}
+          </span>
+        );
+      },
     },
   ];
 

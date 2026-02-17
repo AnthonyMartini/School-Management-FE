@@ -70,7 +70,7 @@ const CalendarPage: React.FC = () => {
           />
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 w-[400px]">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 w-96">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
             Upcoming Events
           </h3>

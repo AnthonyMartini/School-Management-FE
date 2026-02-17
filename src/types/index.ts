@@ -124,4 +124,5 @@ export interface Announcement {
   date: string;
   priority: 'low' | 'medium' | 'high';
   targetAudience: string[];
+  classId?: string;
 }
